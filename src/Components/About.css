@@ -1,0 +1,305 @@
+/* --- About Component (Serene Majesty Style) --- */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  animation: slideUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.about-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.about-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.8rem;
+  color: var(--charcoal);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.title-accent {
+  width: 60px;
+  height: 2px;
+  background: var(--primary-gold);
+}
+
+.about-intro {
+  color: var(--secondary-grey);
+  font-size: 1.1rem;
+  max-width: 800px;
+  line-height: 1.8;
+  margin: 1rem 0 0 0;
+  text-align: center;
+}
+
+/* Values Grid (Sharp Geometry) */
+.values-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.value-card {
+  background: var(--surface-lowest);
+  padding: 3rem 2rem;
+  border-radius: 0px !important; /* STRICT SHARP */
+  text-align: center;
+  box-shadow: none;
+  border: 1px solid var(--border-light);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-gold);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  background: var(--bg-offwhite);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px !important; /* Sharp */
+  border: 1px solid var(--border-light);
+  transition: all 0.4s;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.1);
+  border-color: var(--primary-gold);
+  background: rgba(197, 160, 89, 0.08);
+}
+
+.value-card h3 {
+  color: var(--charcoal);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.value-card p {
+  color: var(--secondary-grey);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Timeline Layout (Sharp Geometry) */
+.timeline-section {
+  background: var(--surface-lowest);
+  padding: 4rem 3rem;
+  border-radius: 0px !important; /* Sharp */
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.timeline-section h3 {
+  color: var(--charcoal);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.timeline-sub {
+  color: var(--secondary-grey);
+  font-size: 0.95rem;
+  margin-bottom: 3rem;
+}
+
+.timeline-navigation {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+/* Horizontal Line behind dots */
+.timeline-navigation::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border-medium);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+  outline: none;
+}
+
+.timeline-year {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--secondary-grey);
+  transition: all 0.3s;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 0px !important; /* Sharp timeline squares */
+  background: var(--bg-offwhite);
+  border: 1px solid var(--border-medium);
+  transition: all 0.3s;
+}
+
+.timeline-btn.active .timeline-year {
+  color: var(--primary-gold);
+}
+
+.timeline-btn.active .timeline-dot {
+  background: var(--primary-gold);
+  border-color: var(--primary-gold);
+  transform: scale(1.2);
+}
+
+/* Timeline Content Card (Sharp Geometry) */
+.timeline-display-card {
+  max-width: 650px;
+  margin: 0 auto;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary-gold);
+  background: var(--bg-offwhite);
+  padding: 2.5rem 2rem;
+  border-radius: 0px !important; /* Sharp */
+  text-align: left;
+  animation: quickFade 0.4s ease-in-out;
+}
+
+.milestone-badge {
+  background: rgba(197, 160, 89, 0.12);
+  color: var(--primary-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0px !important; /* Sharp badge */
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.timeline-content h4 {
+  font-size: 1.6rem;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.milestone-description {
+  color: var(--secondary-grey);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.milestone-highlight {
+  background: #ffffff;
+  border: 1px dashed rgba(197, 160, 89, 0.5);
+  padding: 1.2rem;
+  border-radius: 0px !important; /* Sharp highlight */
+  font-size: 0.95rem;
+  color: var(--charcoal);
+}
+
+/* Stats Section (Sharp Grid) */
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  background: var(--charcoal);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  border-radius: 0px !important; /* Sharp */
+  border-top: 3px solid var(--primary-gold);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-num {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes quickFade {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .timeline-navigation {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .timeline-navigation::before {
+    display: none;
+  }
+  .stats-section {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .timeline-section {
+    padding: 3rem 1.5rem;
+  }
+}
